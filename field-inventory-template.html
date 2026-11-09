@@ -46,16 +46,117 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                    <td>Full Name</td>
+                    <td>Identify the Volunteer for registration.</td>
+                    <td>Yes</td>
+                    <td>Text input</td>
+                    <td>full_name</td>
+                    <td>name</td>
+                    <td>Required</td>
+                    <td>Personal information; no address or birth date collected.</td>
                     </tr>
+                    <tr>
+                        <td>Email address</td>
+                        <td>Contact the volunteer about their request</td>
+                        <td>Yes</td>
+                        <td>Email input</td>
+                        <td>email</td>
+                        <td>email</td>
+                        <td>Required; valid email format</td>
+                        <td>Contact information; no phone number collected.</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred volunteer activity</td>
+                        <td>Help assign volunteers to suitable tasks.</td>
+                        <td>Yes</td>
+                        <td>Select</td>
+                        <td>activity</td>
+                        <td>N/A</td>
+                        <td>Choose one activity</td>
+                        <td>Non-sensitive preference.</td>
+                    </tr>
+                     <tr>
+                        <td>Preferred volunteer day</td>
+                        <td>Help plan volunteer schedules.</td>
+                        <td>Yes</td>
+                        <td>Select</td>
+                        <td>volunteer_day</td>
+                        <td>N/A</td>
+                        <td>Choose one day</td>
+                        <td>Non-sensitive scheduling information.</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred time of day</td>
+                        <td>Identify when the volunteer is available.</td>
+                        <td>Yes</td>
+                        <td>Radio group</td>
+                        <td>volunteer_time: morning, afternoon</td>
+                        <td>N/A</td>
+                        <td>Select one option</td>
+                        <td>Non-sensitive scheduling preference.</td>
+                    </tr>
+                    <tr>
+                        <td>Gardening experience</td>
+                        <td>Help match tasks to experience level.</td>
+                        <td>Yes</td>
+                        <td>Radio group</td>
+                        <td>experience: beginner, intermediate, advanced</td>
+                        <td>N/A</td>
+                        <td>Select one option</td>
+                        <td>Non-sensitive skill information.</td>
+                    </tr>
+                    <tr>
+                        <td>Hours available per week</td>
+                        <td>Estimate volunteer availability.</td>
+                        <td>Yes</td>
+                        <td>Number input</td>
+                        <td>hours</td>
+                        <td>N/A</td>
+                        <td>Minimum 1, maximum 20</td>
+                        <td>Only estimated hours are collected.</td>
+                    </tr>
+                    <tr>
+                        <td>Interested in learning gardening skills?</td>
+                        <td>Help plan beginner-friendly activities.</td>
+                        <td>No</td>
+                        <td>Checkbox</td>
+                        <td>learn_skills: yes</td>
+                        <td>N/A</td>
+                        <td>Optional</td>
+                        <td>Non-sensitive interest.</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility accommodations</td>
+                        <td>Allow volunteers to request accommodations.</td>
+                        <td>No</td>
+                        <td>Textarea</td>
+                        <td>accessibility</td>
+                        <td>N/A</td>
+                        <td>Optional; describe requested accommodations only</td>
+                        <td>Potentially sensitive; no medical details requested.</td>
+                    </tr>
+                    <tr>
+                        <td>Additional comments</td>
+                        <td>Allow volunteers to share relevant questions.</td>
+                        <td>No</td>
+                        <td>Textarea</td>
+                        <td>comments</td>
+                        <td>N/A</td>
+                        <td>Optional; maximum 300 characters</td>
+                        <td>Avoid unnecessary personal information.</td>
+                    </tr>
+                    <tr>
+                        <td>Prototype acknowledgment</td>
+                        <td>Confirm the user understands this is a demonstration.</td>
+                        <td>Yes</td>
+                        <td>Checkbox</td>
+                        <td>acknowledgment: yes</td>
+                        <td>N/A</td>
+                        <td>Must be checked</td>
+                        <td>No additional personal information collected.</td>
+                    </tr>
+
                 </tbody>
             </table>
         </body>
-        </html>
+</html>

@@ -1,66 +1,490 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Inclusive Form Flow</title><link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header class="page-header">
-            <p class="eyebrow">Application, Registration, or Request</p>
-            <h1>Replace with a specific task title</h1>
-            <p class="lede">Explain who this form is for, what it accomplishes, how long it takes, and what happens after submission.</p>
-        </header>
-        <main>
-            <section id="expectations">
-                <h2>F1 · Purpose and Expectations</h2>
-                <p>State the required/optional convention and a concise privacy notice. Use fictional test data only.</p>
-            </section>
-            <form action="" method="get">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Community Garden Volunteer Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <p class="eyebrow">Community Garden Volunteer Program</p>
+        <h1>Grow With Us!</h1>
+        <p class="lede">
+            Help make our neighborhood a little greener.
+            Whether you are new to gardening or have years
+            of experience, there is a place for you!
+        </p>
+    </header>
+
+    <main>
+        <!-- F1: Purpose and Expectations -->
+        <section id="expectations">
+            <h2>F1 · Purpose and Expectations</h2>
+
+            <p>
+                This form is for community members interested
+                in volunteering at a local community garden.
+                Volunteers may help with planting, watering,
+                weeding, harvesting, and garden maintenance.
+            </p>
+
+            <p>
+                Completing this form takes approximately
+                3–5 minutes. In a real program, a garden
+                coordinator would review the request and
+                contact the volunteer about opportunities.
+            </p>
+
+            <p>
+                <strong>Required fields:</strong>
+                Questions marked (required) must be completed.
+                All other questions are optional.
+            </p>
+
+            <p>
+                <strong>Privacy notice:</strong>
+                This is a fictional class project.
+                No real volunteer registration takes place.
+                Use fictional information only.
+                Do not enter real personal or medical details.
+            </p>
+        </section>
+
+        <!-- F4: Requirements and Validation -->
+        <section id="requirements">
+            <h2>F4 · Requirements and Validation</h2>
+
+            <p>Before beginning, please note:</p>
+
+            <ul>
+                <li>Enter a fictional name and email address.</li>
+                <li>Choose an activity, day, and time.</li>
+                <li>Select your gardening experience level.</li>
+                <li>Enter between 1 and 20 available hours per week.</li>
+                <li>Optional comments are limited to 300 characters.</li>
+                <li>Complete the required acknowledgment.</li>
+            </ul>
+        </section>
+
+        <!-- F3: Semantic Form -->
+        <!-- The dialog action prevents navigation to a data endpoint.
+             This is a nonfunctional classroom prototype. -->
+        <form action="about:blank" method="post">
+            <fieldset>
+                <legend>F3 · Volunteer Contact Information</legend>
+
+                <p class="help">
+                    Please use fictional information.
+                    All fields in this section are required.
+                </p>
+
+                <div class="field">
+                    <label for="full-name">
+                        Full Name (required)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full_name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="email">
+                        Email Address (required)
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="alex@example.com"
+                        required
+                    >
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>F3 · Volunteer Preferences</legend>
+
+                <p class="help">
+                    Tell us how you would like to help.
+                    All questions in this section are required.
+                </p>
+
+                <div class="field">
+                    <label for="activity">
+                        Preferred Volunteer Activity (required)
+                    </label>
+
+                    <select id="activity" name="activity" required>
+                        <option value="">Select an activity</option>
+                        <option value="planting">Planting Flowers</option>
+                        <option value="watering">Watering Plants</option>
+                        <option value="weeding">Weeding</option>
+                        <option value="harvesting">Harvesting Vegetables</option>
+                        <option value="maintenance">Garden Maintenance</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="volunteer-day">
+                        Preferred Volunteer Day (required)
+                    </label>
+
+                    <select
+                        id="volunteer-day"
+                        name="volunteer_day"
+                        required
+                    >
+                        <option value="">Select a day</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
+                    </select>
+                </div>
+
                 <fieldset>
-                    <legend>F3 · Contact information</legend>
-                    <p class="help">Replace or extend this group based on your justified field inventory.</p>
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name">
-                    </div>
-                    <div class="field">
-                        <label for="email">Email address (required)</label>
-                        <input id="email" name="email" type="email" autocomplete="email" required>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
+                    <legend>Preferred Time of Day (required)</legend>
+
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option B</label>
-                    </fieldset>
-                    <div class="field">
-                        <label for="details">Request details</label>
-                        <p class="help" id="details-help">Explain the expected content and any limit before entry.</p>
-                        <textarea id="details" name="details" aria-describedby="details-help"></textarea>
-                    </div>
-                    <button type="submit">Replace with a specific action</button>
-                </form>
-                <section id="states">
-                    <h2>F5 · State and Recovery Specimen</h2>
-                    <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
-                    <div class="error-summary">
-                        <h3>There is a problem with the fictional submission</h3>
-                        <p><a href="#error-example">Email address needs attention</a></p>
-                    </div>
-                    <div class="field field-error">
-                        <label for="error-example">Email address</label>
-                        <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
-                        <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
-                    </div>
-                    <button type="button" disabled>Disabled example</button>
-                </section>
-                <section id="documentation">
-                    <h2>F2 and F6 · Planning and Evidence</h2>
-                    <p>Link your field inventory, state matrix, fictional test-data list, completed test record, and AI disclosure.</p>
-                </section>
-            </main>
-        </body>
-        </html>
+                        <input
+                            type="radio"
+                            name="volunteer_time"
+                            value="morning"
+                            required
+                        >
+                        Morning
+                    </label>
+
+                    <label class="choice">
+                        <input
+                            type="radio"
+                            name="volunteer_time"
+                            value="afternoon"
+                        >
+                        Afternoon
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Gardening Experience (required)</legend>
+
+                    <label class="choice">
+                        <input
+                            type="radio"
+                            name="experience"
+                            value="beginner"
+                            required
+                        >
+                        Beginner
+                    </label>
+
+                    <label class="choice">
+                        <input
+                            type="radio"
+                            name="experience"
+                            value="intermediate"
+                        >
+                        Intermediate
+                    </label>
+
+                    <label class="choice">
+                        <input
+                            type="radio"
+                            name="experience"
+                            value="advanced"
+                        >
+                        Advanced
+                    </label>
+                </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>F3 · Additional Volunteer Information</legend>
+
+                <div class="field">
+                    <label for="hours">
+                        Hours Available Per Week (required)
+                    </label>
+
+                    <p class="help" id="hours-help">
+                        Enter a number between 1 and 20.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="hours"
+                        name="hours"
+                        min="1"
+                        max="20"
+                        step="1"
+                        aria-describedby="hours-help"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label class="choice">
+                        <input
+                            type="checkbox"
+                            name="learn_skills"
+                            value="yes"
+                        >
+                        I am interested in learning new
+                        gardening skills (optional).
+                    </label>
+                </div>
+
+                <div class="field">
+                    <label for="accessibility">
+                        Accessibility Accommodations (optional)
+                    </label>
+
+                    <p class="help" id="accessibility-help">
+                        Describe any accommodations that would
+                        help you participate. Please do not
+                        include medical diagnoses or private
+                        health information.
+                    </p>
+
+                    <textarea
+                        id="accessibility"
+                        name="accessibility"
+                        rows="4"
+                        aria-describedby="accessibility-help"
+                    ></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="comments">
+                        Additional Comments (optional)
+                    </label>
+
+                    <p class="help" id="comments-help">
+                        Share any questions about volunteering.
+                        Maximum 300 characters.
+                    </p>
+
+                    <textarea
+                        id="comments"
+                        name="comments"
+                        rows="4"
+                        maxlength="300"
+                        aria-describedby="comments-help"
+                    ></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>F3 · Acknowledgment</legend>
+
+                <label class="choice">
+                    <input
+                        type="checkbox"
+                        id="acknowledgment"
+                        name="acknowledgment"
+                        value="yes"
+                        required
+                    >
+                    I understand that this is a fictional
+                    class project and does not register me
+                    for a real volunteer program. (required)
+                </label>
+            </fieldset>
+
+            <button type="submit">
+                Submit Volunteer Interest
+            </button>
+
+            <p class="help">
+                This is a prototype. No registration confirmation
+                or email will be sent.
+            </p>
+        </form>
+
+        <!-- F5: State and Recovery Specimen -->
+        <section id="states">
+            <h2>F5 · State and Recovery Specimen</h2>
+
+            <p>
+                The examples below demonstrate form states.
+                They are not part of the volunteer registration.
+            </p>
+
+            <div class="field">
+                <label for="state-default">
+                    Default State
+                </label>
+                <input
+                    type="text"
+                    id="state-default"
+                    placeholder="Example text"
+                >
+            </div>
+
+            <div class="field">
+                <label for="state-focus">
+                    Focus State
+                </label>
+                <input
+                    type="text"
+                    id="state-focus"
+                    placeholder="Tab here to see the focus outline"
+                >
+                <p class="help">
+                    Use the Tab key to see the visible
+                    keyboard focus indicator.
+                </p>
+            </div>
+
+            <div class="field">
+                <label for="state-required">
+                    Required State
+                </label>
+                <input
+                    type="text"
+                    id="state-required"
+                    required
+                    placeholder="Required example"
+                >
+            </div>
+
+            <div class="field">
+                <label for="state-valid">
+                    Valid State
+                </label>
+                <input
+                    type="email"
+                    id="state-valid"
+                    value="alex@example.com"
+                    readonly
+                >
+                <p class="help">
+                    Example of a correctly formatted email.
+                </p>
+            </div>
+
+            <div class="field field-error">
+                <label for="state-invalid">
+                    Invalid State
+                </label>
+                <input
+                    type="email"
+                    id="state-invalid"
+                    value="alex.example"
+                    aria-invalid="true"
+                    aria-describedby="invalid-message"
+                    readonly
+                >
+                <p id="invalid-message">
+                    <strong>Error:</strong>
+                    Enter an email address in the format
+                    name@example.com.
+                </p>
+            </div>
+
+            <div class="field">
+                <label for="state-disabled">
+                    Disabled State
+                </label>
+                <input
+                    type="text"
+                    id="state-disabled"
+                    value="Unavailable option"
+                    disabled
+                >
+                <p class="help">
+                    This field is unavailable and cannot
+                    receive keyboard focus.
+                </p>
+            </div>
+
+            <h3>Static Server-Returned Error Example</h3>
+
+            <p>
+                This example represents an error that a server
+                might return after a fictional submission.
+                No server is connected to this form.
+            </p>
+
+            <div class="error-summary" role="alert">
+                <h3>There is a problem with the submission</h3>
+                <p>
+                    Your email address could not be accepted.
+                    Review the field below and try again.
+                </p>
+                <a href="#error-example">
+                    Go to the email field
+                </a>
+            </div>
+
+            <div class="field field-error">
+                <label for="error-example">
+                    Email Address
+                </label>
+
+                <input
+                    id="error-example"
+                    name="error_example"
+                    type="email"
+                    value="alex@example.com"
+                    aria-invalid="true"
+                    aria-describedby="error-message"
+                >
+
+                <p id="error-message">
+                    <strong>Error:</strong>
+                    This email address is already associated
+                    with a volunteer request. Check the
+                    address or contact the garden coordinator.
+                </p>
+            </div>
+
+            <button type="button" disabled>
+                Disabled Button Example
+            </button>
+        </section>
+
+        <!-- F2 and F6: Documentation -->
+        <section id="documentation">
+            <h2>F2 and F6 · Planning and Evidence</h2>
+
+            <p>
+                The completed field inventory explains the
+                purpose, requirements, constraints, and privacy
+                decisions for each form control.
+            </p>
+
+            <p>
+                <a href="field-inventory-template.html">
+                    View F2 Field Inventory
+                </a>
+            </p>
+
+            <p>
+                F6 evidence includes responsive layout testing,
+                keyboard accessibility testing, HTML and CSS
+                validation, fictional test data, and an AI
+                assistance disclosure.
+            </p>
+
+            <p>
+                Testing results and screenshots will be
+                documented after the form is completed.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
